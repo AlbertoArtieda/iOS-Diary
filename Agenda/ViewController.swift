@@ -52,7 +52,7 @@ class ViewController: UIViewController {
                     else {
                         self.mensaje.isHidden = false
                     }
-                    App
+                    
                 }.resume()
         
     }

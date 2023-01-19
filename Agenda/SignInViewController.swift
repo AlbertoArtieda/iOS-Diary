@@ -35,7 +35,7 @@ class SignInViewController: UIViewController {
             "user": txtName.text,
             "pass": txtPass.text]
         
-        let url = URL(string: "https://superapi.netlify.app/api/db/eventos")!
+        let url = URL(string: "https://superapi.netlify.app/api/register")!
         let session = URLSession.shared
         var request = URLRequest(url: url)
         request.httpMethod = "POST"

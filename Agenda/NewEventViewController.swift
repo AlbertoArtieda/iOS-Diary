@@ -1,9 +1,3 @@
-//
-//  NewEventViewController.swift
-//  Agenda
-//
-//  Created by Apps2M on 17/1/23.
-//
 
 import UIKit
 
@@ -45,7 +39,7 @@ class NewEventViewController: UIViewController {
         let url = URL(string: "https://superapi.netlify.app/api/db/eventos")!
         let session = URLSession.shared
         var request = URLRequest(url: url)
-        request.httpMethod = "POST" //set http method as POST
+        request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
           

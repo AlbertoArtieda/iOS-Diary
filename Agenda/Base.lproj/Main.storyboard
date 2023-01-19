@@ -242,7 +242,7 @@ FkNvbnRyYXNlw7FhA
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VRC-T0-11s">
                                 <rect key="frame" x="70" y="771" width="274" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="GUARDAR NUEVO EVENTO">
+                                <buttonConfiguration key="configuration" style="plain" title="GUARDAR EVENTO">
                                     <backgroundConfiguration key="background">
                                         <color key="backgroundColor" red="0.1605516672" green="0.46472889179999999" blue="0.7388911843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </backgroundConfiguration>
@@ -292,7 +292,7 @@ FkNvbnRyYXNlw7FhA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="joa-eN-Cxs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1386" y="815"/>
+            <point key="canvasLocation" x="1480" y="815"/>
         </scene>
     </scenes>
     <resources>

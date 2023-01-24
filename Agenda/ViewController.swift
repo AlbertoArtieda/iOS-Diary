@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func btnENTRAR_OnClick(_ sender: Any) {
+        // Si el nombre o la contraseña están vacíos muestra un mensaje e impide acceder
         if (txtUSUARIO.text == "" || txtPASS.text == ""){
             mensaje.isHidden = false
             return
@@ -43,6 +44,7 @@ class ViewController: UIViewController {
                     guard let data = data else{
                         return
                     }
+                    // Si el mensaje que devuelve es correcto accede a la app
                     if (String(data: data, encoding: .utf8) == "Login succesful"){
                         DispatchQueue.main.sync{
                             self.performSegue(withIdentifier: "GoToList", sender: sender)

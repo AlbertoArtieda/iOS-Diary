@@ -12,6 +12,7 @@ class Event: Codable {
     
 }
 
+// Array de eventos vacío
 var ListEvents: [Event] = []
 
 class NewEventViewController: UIViewController {
@@ -23,19 +24,20 @@ class NewEventViewController: UIViewController {
     }
     
     @IBAction func SaveEvent(_ sender: Any) {
+        // Si el nombre del evento está vacío pone la casilla en rojo e impide guardarlo
         if (txtNameEvent.text == ""){
             txtNameEvent.backgroundColor = .systemRed
             return
         }
         POSTEvent()
-        
+        // Cierra la pantalla y vuelve a la pantalla de la lista de eventos
         self.dismiss(animated: true, completion: nil)
     }
     
     func POSTEvent() {
         let parameters: [String: Any] = [
             "name": txtNameEvent.text,
-            "date": Double(DateNewEvent.date.timeIntervalSince1970)]
+            "date": Double(DateNewEvent.date.timeIntervalSince1970 * 1000)]
         let url = URL(string: "https://superapi.netlify.app/api/db/eventos")!
         let session = URLSession.shared
         var request = URLRequest(url: url)

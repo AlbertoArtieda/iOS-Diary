@@ -140,7 +140,7 @@
 FkNvbnRyYXNlw7FhA
 </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BeBooks" translatesAutoresizingMaskIntoConstraints="NO" id="W3J-YL-gSM">
                                 <rect key="frame" x="100" y="94" width="214" height="98"/>

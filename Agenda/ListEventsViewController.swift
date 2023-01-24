@@ -7,8 +7,6 @@
 
 import UIKit
 
-
-
 class ListEventsViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
@@ -30,11 +28,12 @@ class ListEventsViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         
+        // Formatea la fecha
         let timeInterval = TimeInterval(ListEvents[indexPath.row].dateEvent / 1000)
         let myNSDate = Date(timeIntervalSince1970: timeInterval)
         
         cell.textLabel?.numberOfLines = 0
-        cell.textLabel?.text = ListEvents[indexPath.row].nameEvent + "\n" + myNSDate.formatted().description
+        cell.textLabel?.text = ListEvents[indexPath.row].nameEvent + "\n" + myNSDate.formatted(date: .abbreviated, time: .standard).description
 
         return cell
     }
@@ -57,6 +56,7 @@ class ListEventsViewController: UIViewController, UITableViewDataSource {
         }.resume()
     }
     
+    // Vacía el array de eventos, vuelve a hacer la llamada para obtener los datos y lo rellena de nuevo actualizado
     @IBAction func btnActualizar_OnClick(_ sender: Any) {
         ListEvents = []
         executeAPI()
